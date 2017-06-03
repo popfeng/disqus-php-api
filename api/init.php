@@ -7,20 +7,23 @@ $client = new Client(new Ruleset());
 $client->imageType = 'png';
 $client->imagePathPNG = '//assets-cdn.github.com/images/icons/emoji/unicode/';
 
-$public_key = 'E8Uh5l5fHZ6gD8U3KycjAIAk46f68Zw7C6eW8WSjZvCLXebZ7p0r1yrYDrLilk2F';
-$origin = 'http://blog.fooleap.org'; // 网站域名
-$forum = '';  // 网站shortname
-$username = ''; // 个人昵称 如 fooleap，为了自己发表评论是登录状态，postcomment 有相关的判断
-$email = ''; // Disqus 账号，邮箱号
-$password = ''; // Disqus 密码
+$env_file = realpath(__DIR__ . '/../../../') . '/.env';
+$env = parse_ini_file($env_file);
+
+$public_key = $env['DISQUS_PUBLIC_KEY'];
+$origin = $env['DISQUS_ORIGIN']; // 网站域名
+$forum = $env['DISQUS_FORUM'];  // 网站shortname
+$username = $env['DISQUS_USERNAME']; // 个人昵称 如 fooleap，为了自己发表评论是登录状态，postcomment 有相关的判断
+$email = $env['DISQUS_EMAIL']; // Disqus 账号，邮箱号
+$password = $env['DISQUS_PASSWORD']; // Disqus 密码
 
 // PHPMailer 相关配置，具体可查看 sendmail 文件
-$site_name = 'Fooleap\'s Blog'; // 网站名
-$smtp_secure = 'ssl'; //
-$smtp_host = 'smtp.exmail.qq.com'; // SMTP 服务器
-$smtp_port = 465; // SMTP 服务器的端口号
-$smtp_username = 'noreply@fooleap.org'; // SMTP 服务器用户名
-$smtp_password = ''; //SMTP 服务器密码
+$site_name = $env['SITE_NAME']; // 网站名
+$smtp_secure = $env['MAIL_ENCRYPTION']; //
+$smtp_host = $env['MAIL_HOST']; // SMTP 服务器
+$smtp_port = $env['MAIL_PORT']; // SMTP 服务器的端口号
+$smtp_username = $env['MAIL_USERNAME']; // SMTP 服务器用户名
+$smtp_password = $env['MAIL_PASSWORD']; //SMTP 服务器密码
 
 //读取文件
 $session_data = json_decode(file_get_contents(sys_get_temp_dir().'/session.json'));
