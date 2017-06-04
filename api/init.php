@@ -117,7 +117,8 @@ function post_format( $post ){
     global $client;
 
     // 访客指定 Gravatar 头像
-    $avatar_url = '//cdn.v2ex.com/gravatar/'.md5($post->author->email).'?d=https://a.disquscdn.com/images/noavatar92.png';
+    //$avatar_url = '//cdn.v2ex.com/gravatar/'.md5($post->author->email).'?d=https://a.disquscdn.com/images/noavatar92.png';
+    $avatar_url = '/img.php?url=https://secure.gravatar.com/avatar/'.md5($_GET['email']).'?d=http://zaoaoaoaoao.com/static/img/felix.png';
     $post->author->avatar->cache = $post->author->isAnonymous ? $avatar_url : $post->author->avatar->cache;
 
     // 表情

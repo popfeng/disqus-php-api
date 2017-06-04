@@ -696,7 +696,7 @@ if (!!document.getElementById('comment')){
     initHTML += '    <\/div>';
     initHTML += '    <div class="comment-box">';
     initHTML += '        <div class="comment-avatar avatar">';
-    initHTML += '            <img class="comment-avatar-image" src="https:\/\/a.disquscdn.com\/images\/noavatar92.png" \/>';
+    initHTML += '            <img class="comment-avatar-image" src="http:\/\/zaoaoaoaoao.com\/static\/img\/felix.png" \/>';
     initHTML += '        <\/div>';
     initHTML += '        <div class="comment-form">';
     initHTML += '            <div class="comment-form-wrapper">';
