@@ -10,7 +10,7 @@ $client->imagePathPNG = '//assets-cdn.github.com/images/icons/emoji/unicode/';
 $env_file = realpath(__DIR__ . '/../../../') . '/.env';
 $env = parse_ini_file($env_file);
 
-$public_key = $env['DISQUS_API_KEY'];
+$public_key = $env['DISQUS_PUBLIC_KEY'];
 $origin = $env['DISQUS_ORIGIN']; // 网站域名
 $forum = $env['DISQUS_FORUM'];  // 网站shortname
 $username = $env['DISQUS_USERNAME']; // 个人昵称 如 fooleap，为了自己发表评论是登录状态，postcomment 有相关的判断
