@@ -1,32 +1,26 @@
 {
-  "name": "disqus_api",
-  "version": "0.0.1",
-  "main": "disqus-api.js",
-  "dependencies": {
-    "css-loader": "^0.28.0",
-    "sass-loader": "^6.0.3",
-    "style-loader": "^0.16.1",
-    "node-sass": "^4.0.0",
-    "webpack": "^2.0.0",
+  "name": "disqus-php-api",
+  "version": "0.1.2",
+  "description": "disqus-php-api 利用 PHP cURL 转发 Disqus API 请求",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
     "autoprefixer": "^6.7.7",
-    "element-closest": "^2.0.2",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "postcss": "^5.2.16",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "node-sass": "^4.5.3",
+    "postcss": "^5.2.17",
     "postcss-loader": "^1.3.3",
-    "timeago.js": "^3.0.1",
-    "webpack": "^2.3.3"
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.16.1",
+    "webpack": "^3.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["disqus"],
+  "repository": "git+https://github.com/fooleap/disqus-php-api.git",
   "author": "fooleap",
-  "license": "ISC",
-  "description": "disqus-php-api ===========",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fooleap/disqus-php-api.git"
-  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/fooleap/disqus-php-api/issues"
   },

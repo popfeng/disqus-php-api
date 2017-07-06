@@ -2,9 +2,12 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const autoprefixer = require('autoprefixer'); 
 module.exports = {
-    entry: './src/main.js',
+    entry: './index.js',
     output: {
-        filename: 'disqus-api.js'       
+        path: __dirname + '/dist',
+        filename: 'iDisqus.min.js',
+        libraryTarget: 'umd',
+        library: 'iDisqus'
     },
 
     module: {
@@ -26,10 +29,10 @@ module.exports = {
                 ]
             }
         }),
-        new ExtractTextPlugin("disqus-api.css"),
+        new ExtractTextPlugin('iDisqus.min.css'),
         new webpack.optimize.UglifyJsPlugin({
             beautify: false,
-            comments: false,
+            comments: true,
             compress: {
                 warnings: false,
                 drop_console: true
