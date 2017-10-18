@@ -183,7 +183,7 @@
         _.opts.badge = !!_.opts.badge ? _.opts.badge : '管理员';
 
         // emoji 表情
-        _.opts.emoji_path = !!_.opts.emoji_path ? _.opts.emoji_path : 'https://assets-cdn.github.com/images/icons/emoji/unicode/';
+        _.opts.emoji_path = !!_.opts.emoji_path ? _.opts.emoji_path : '/img.php?url=https://assets-cdn.github.com/images/icons/emoji/unicode/';
         _.emoji_list =!!_.opts.emoji_list ? _.opts.emoji_list : [{
             code:'smile',
             title:'笑脸',
