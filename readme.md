@@ -1,8 +1,18 @@
-disqus-php-api
+Disqus PHP API
 ===========
 利用 PHP cURL 转发 Disqus API 请求
 
 > Disqus 被墙，故做几个简单的接口，用于墙内环境访问 Disqus。
+
+## 实现功能
+
+* 评论列表
+* 评论发表
+* 图片上传
+* Gravatar 头像
+* Emoji 表情
+* 邮件通知
+* ……
 
 ## Disqus 设置
 
@@ -135,11 +145,34 @@ var disq = new iDisqus('comment', {
 * {Boolean}
 * 默认：`false`
 
+##### auto
+
+* 是否自动创建 Thread，为了不创建垃圾 Thread，并不推荐设置为 `true`
+* {Boolean}
+* 默认：`false`
+
+##### badge
+
+* 管理员徽章文本
+* {String}
+* 默认：`"管理员"`
+
 ##### emoji_path
 
-* emoji 表情 PNG 图片路径
+* Emoji 表情 PNG 图片路径
 * {String}
 * 默认：`"https://assets-cdn.github.com/images/icons/emoji/unicode/"`
+
+##### emoji_list
+
+* 自定义评论框内的点选 Emoji 表情，具体可看 DEMO 页面
+* {Object}
+
+##### emoji_preview
+
+* 评论预览是否支持 Emoji 短代码
+* {Boolean}
+* 默认：`false`
 
 ### 实例方法
 
@@ -154,6 +187,7 @@ var disq = new iDisqus('comment', {
 #### count
 
 * 加载评论数
+* 用法：创建容器（可多个），加属性 data-disqus-url 值放页面链接，创建实例后执行则可显示评论数，具体可查看DEMO 页面
 
 #### popular
 
