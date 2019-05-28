@@ -62,7 +62,7 @@ define('DISQUS_MEDIAIP', '151.101.24.64');
 define('IMAGE_PROXY', '/img.php?url=');
 define('GRAVATAR_CDN', IMAGE_PROXY . 'https://cn.gravatar.com/avatar/');
 define('GRAVATAR_DEFAULT', 'http://zaoaoaoaoao.com/static/img/felix.png');
-define('EMOJI_PATH', IMAGE_PROXY . 'https://assets-cdn.github.com/images/icons/emoji/unicode/');
+define('EMOJI_PATH', IMAGE_PROXY . 'https://github.githubassets.com/images/icons/emoji/unicode/');
 
 /*
  * PHP Mailer 设置
